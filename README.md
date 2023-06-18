@@ -13,13 +13,18 @@ Other plugins & libraries used are:
 
 ## Project setup
 
+- clone the repository in you local and run the below command
+
 ```
 # install dependencies
 npm install
 
+# to run in development mode
+npm run dev
+
 # to build application
 npm run build
 
-### Customize configuration
+## Customize configuration
 
 See [Configuration Reference](https://vitejs.dev/config/).
