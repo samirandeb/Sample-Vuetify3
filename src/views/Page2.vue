@@ -29,6 +29,8 @@
           </div>
         </div>
       </template>
+
+      <template #empty>Loading...</template>
     </query-builder>
   </v-container>
 </template>
@@ -73,9 +75,9 @@ export default {
       }))
     },
     pie(resultSet) {
-      console.log(resultSet.series().map(series => (
+      /* console.log(resultSet.series().map(series => (
         series.series.map(row => [row.x, row.value])
-      ))[0])
+      ))[0]) */
       return resultSet.series().map(series => (
         series.series.map(row => [row.x, row.value])
       ))[0]
