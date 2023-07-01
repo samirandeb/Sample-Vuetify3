@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card class="elevation-12" width="455">
+        <v-card class="elevation-12" max-height="500px" max-width="575px">
             <v-toolbar dark color="primary">
                 <v-toolbar-title>{{ isRegister ? stateObj.register.name : stateObj.login.name }} form</v-toolbar-title>
             </v-toolbar>
@@ -15,7 +15,8 @@
                     <v-text-field v-if="isRegister" v-model="confirmPassword" name="confirmPassword"
                         label="Confirm Password" type="password" placeholder="cocnfirm password" required></v-text-field>
                     <div class="red--text"> {{ errorMessage }}</div>
-                    <v-btn type="submit" class="mt-4" color="primary" value="log in">{{ isRegister ? stateObj.register.name :
+                    <v-btn type="submit" class="mt-4" color="primary" value="log in">{{ isRegister ? stateObj.register.name
+                        :
                         stateObj.login.name }}</v-btn>
                     <div class="grey--text mt-4" v-on:click="isRegister = !isRegister;">
                         {{ toggleMessage }}
@@ -23,7 +24,6 @@
                 </form>
             </v-card-text>
         </v-card>
-
     </v-container>
 </template>
  
