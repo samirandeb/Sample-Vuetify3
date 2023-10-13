@@ -1,14 +1,35 @@
 <template>
   <query-builder :cubejs-api="cubejsApi" :query="query">
     <template
-      v-slot:builder="{ measures, setMeasures, availableMeasures, dimensions, setDimensions, availableDimensions }">
+      v-slot:builder="{ measures, setMeasures, availableMeasures, dimensions, setDimensions, availableDimensions , timeDimensions,
+          setTimeDimensions,
+          availableTimeDimensions,}">
 
       <v-container fluid class="pa-4 pa-md-8 pt-6 background-white">
         <v-row>
           <v-col cols="12" md="8">
-            <VueMultiselect placeholder="Please Select" label="Title" track-by="name" :multiple="true"
+            <VueMultiselect placeholder="Measure" label="Title" track-by="name" :multiple="true"
               :customLabel="customLabel" :model-value="measures" :options="availableMeasures"
               @update:modelValue="(...args) => set(setMeasures, ...args)" />
+          </v-col>
+        </v-row>
+      </v-container>
+
+      <v-container fluid class="pa-4 pa-md-8 pt-6 background-white">
+        <v-row>
+          <v-col cols="12" md="8">
+            <VueMultiselect placeholder="Dimensions" label="Title" track-by="name" :multiple="true"
+              :customLabel="customLabel" :model-value="dimensions" :options="availableDimensions"
+              @update:modelValue="(...args) => set(setDimensions, ...args)" />
+          </v-col>
+        </v-row>
+      </v-container>
+        <v-container fluid class="pa-4 pa-md-8 pt-6 background-white">
+        <v-row>
+          <v-col cols="12" md="8">
+            <VueMultiselect placeholder="TimeDimension" label="Title" track-by="name" :multiple="true"
+              :customLabel="customLabel" :model-value="timeDimensions" :options="availableTimeDimensions"
+              @update:modelValue="(...args) => set(setTimeDimensions, ...args)" />
           </v-col>
         </v-row>
       </v-container>

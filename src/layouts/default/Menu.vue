@@ -19,8 +19,8 @@ const drawer = ref(true)
 const memenuItems = ref([{ text: 'My Files', icon: 'mdi-folder', path: "/landing" },
 { text: 'Shared with me', icon: 'mdi-account-multiple', path: "/page2" },
 { text: 'Starred', icon: 'mdi-star', path: "/landing" },
-{ text: 'Recent', icon: 'mdi-history', path: "/landing" },
-{ text: 'Offline', icon: 'mdi-check-circle', path: "/landing" },
+{ text: 'Recent', icon: 'mdi-history', path: "/recent" },
+{ text: 'E-Chart', icon: 'mdi-check-circle', path: "/echart" },
 { text: 'Uploads', icon: 'mdi-upload', path: "/landing" },
 { text: 'Backups', icon: 'mdi-cloud-upload', path: "/landing" }])
 </script>

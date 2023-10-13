@@ -32,6 +32,16 @@ const routes = [
         name: 'page2',
         component: () => import(/* webpackChunkName: "home" */ '@/views/Page2.vue'),
       },
+      {
+        path: '/recent',
+        name: 'recent',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Recent.vue'),
+      },
+      {
+        path: '/echart',
+        name: 'echart',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/Echart.vue'),
+      },
     ],
   },
 ]
